@@ -1,0 +1,53 @@
+# Copyright (C) 2022 SuperAdmin <vmaury@timgroup.fr>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#
+# Generic
+#
+
+# Module label 'ModuleAxs4AllName'
+ModuleAxs4AllName = Axs4All
+# Module description 'ModuleAxs4AllDesc'
+ModuleAxs4AllDesc = Axs4All description
+
+#
+# Admin page
+#
+Axs4AllSetup = Axs4All setup
+Settings = Settings
+Axs4AllSetupPage = Axs4All setup page
+AXS4ALL_MYPARAM1 = My param 1
+AXS4ALL_MYPARAM1Tooltip = My param 1 tooltip
+AXS4ALL_MYPARAM2=My param 2
+AXS4ALL_MYPARAM2Tooltip=My param 2 tooltip
+
+
+#
+# About page
+#
+About = About
+Axs4AllAbout = About Axs4All
+Axs4AllAboutPage = Axs4All about page
+
+#
+# Sample page
+#
+MyPageName = My page name
+
+#
+# Sample widget
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description
