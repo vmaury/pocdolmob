@@ -45,7 +45,8 @@ class modAxs4All extends DolibarrModules
 
 		// Id for module (must be unique).
 		// Use here a free id (See in Home -> System information -> Dolibarr for list of used modules id).
-		$this->numero = 500000; // TODO Go on page https://wiki.dolibarr.org/index.php/List_of_modules_id to reserve an id number for your module
+		// TimGroup has 274400 - 274449 range reserved
+		$this->numero = 274401;  // 274400 = fusion produit // TODO Go on page https://wiki.dolibarr.org/index.php/List_of_modules_id to reserve an id number for your module
 
 		// Key text used to identify module (for permissions, menus, etc...)
 		$this->rights_class = 'axs4all';
@@ -63,13 +64,14 @@ class modAxs4All extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 
 		// Module description, used if translation string 'ModuleAxs4AllDesc' not found (Axs4All is name of module).
-		$this->description = "Axs4AllDescription";
+		$this->description = "POC webapp including QR-Bar-Code scan, photo, draw";
 		// Used only if file README.md and README-LL.md not found.
-		$this->descriptionlong = "Axs4AllDescription";
+		$this->descriptionlong = "This module is intended to be a POC (Proof of Concept) or Quistart for developpers (only) to build a responsive webapp beside a Dolibarr install.\n
+It integrates bootstrap5, a js plugin to scan QR/barcodes, photo and draw app (and code to send to Dolibarr)";
 
 		// Author
-		$this->editor_name = 'Editor name';
-		$this->editor_url = 'https://www.example.com';
+		$this->editor_name = 'TimGroup';
+		$this->editor_url = 'https://www.timgroup.fr';
 
 		// Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated' or a version string like 'x.y.z'
 		$this->version = '1.0';

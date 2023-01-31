@@ -94,7 +94,7 @@ $formfile = new FormFile($db);
 llxHeader("", $langs->trans("Axs4AllArea"));
 
 //print load_fiche_titre($langs->trans("Axs4AllArea"), '', 'axs4all.png@axs4all');
-print 'Cliquez <a href="www/esmagasin.php" target="_blank">ICI</a> pour accéder à la page de gestion des E/S de stock du magasin</a>';
+print 'Cliquez <a href="www/" target="_blank">Accéder à la web app responsive</a>';
 
 print '<div class="fichecenter"><div class="fichethirdleft">';
 
