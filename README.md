@@ -1,86 +1,43 @@
-# AXS4ALL FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
+# POC DOL MOB
 
-## Features
+This module is intended to be a "POC" (Proof of Concept") or Quistart for developpers (only) to build a responsive webapp on top of a Dolibarr install
 
-Description of the module...
+** It's not usable in a production environment, it's not secured, keep in mind it's a prototype **
 
-<!--
-![Screenshot axs4all](img/screenshot_axs4all.png?raw=true "Axs4All"){imgmd}
--->
+I'ts mainly intended to be used with a smartphone or tablett (even if it's also working on computer).
 
-Other external modules are available on [Dolistore.com](https://www.dolistore.com).
-
-## Translations
-
-Translations can be completed manually by editing files into directories *langs*.
-
-<!--
-This module contains also a sample configuration for Transifex, under the hidden directory [.tx](.tx), so it is possible to manage translation using this service.
-
-For more informations, see the [translator's documentation](https://wiki.dolibarr.org/index.php/Translator_documentation).
-
-There is a [Transifex project](https://transifex.com/projects/p/dolibarr-module-template) for this module.
--->
-
-<!--
+It has been tested with Firefow Mobile and Chrome Mobile
 
 ## Installation
+Installation is made like a classic Dolibarr module, copy all the axs2all folder in htdocs/custom and activate the module.
 
-### From the ZIP file and GUI interface
+I strongly advise to add another subdomain in your install like mobdol.mydomain.com that points directly to dol_instal_folder/htdocs/custom/axs4all/www
 
-- If you get the module in a zip file (like when downloading it from the market place [Dolistore](https://www.dolistore.com)), go into
-menu ```Home - Setup - Modules - Deploy external module``` and upload the zip file.
+And you've to activate and force https if you want to use the QR/Barcode scanner
 
-Note: If this screen tell you there is no custom directory, check your setup is correct:
+## short description
 
-- In your Dolibarr installation directory, edit the ```htdocs/conf/conf.php``` file and check that following lines are not commented:
+I tried to respect "KISS", Keep It Stupid Simple ... as possible
 
-    ```php
-    //$dolibarr_main_url_root_alt ...
-    //$dolibarr_main_document_root_alt ...
-    ```
+It integrates 
+- bootstrap 5.2.1
+- jquery 3.6.1 (I continue to prefer - maybe because I'm too lazy - jquery syntax to classic javascript query syntax)
+- authentification thru dolibarr auth system
+- dynamic lists without hugly JS, using <datalist></datalist> wich is filled by ajax with dolibarr values : see www/assets/datalist_utils.js, which call www/includes/ajaxDataList.php. 
+For the moment, it can retrieve only project, product and user list
+*NB* : the datalist doesn't run ok (not implemented) on Firefox Mobile
+- a fantastic [js plugin to scan QR/barcodes](https://blog.minhazav.dev/research/html5-qrcode.html), thanks a lot to [Minhaz](https://blog.minhazav.dev/), Senior Software Engineer at Google
+- a page to directly take photo from the smartphone, or upload existing photos on the phone to dolibarr (in the demo, photos are uploaded in a project document section)
+Thanks a lot to [Bensonruan](https://github.com/bensonruan/webcam-easy)
+- a page to draw (for example to let sign a doc by a customer) and send to dolibarr
+Thanks a lot to cnbilgin https://github.com/cnbilgin/jquery-drawpad, and https://github.com/cnbilgin/jquery-drawpad
 
-- Uncomment them if necessary (delete the leading ```//```) and assign a sensible value according to your Dolibarr installation
+As this plugin is free, there is no support. But if you want me to developp a custom thing using it, I'm available ;-)
 
-    For example :
+## Démo
+- Classic Dolibarr https://dolibarr-cur.dlcube.com
+- Responsive webapp : https://dolmob.dlcube.com
 
-    - UNIX:
-        ```php
-        $dolibarr_main_url_root_alt = '/custom';
-        $dolibarr_main_document_root_alt = '/var/www/Dolibarr/htdocs/custom';
-        ```
-
-    - Windows:
-        ```php
-        $dolibarr_main_url_root_alt = '/custom';
-        $dolibarr_main_document_root_alt = 'C:/My Web Sites/Dolibarr/htdocs/custom';
-        ```
-
-### From a GIT repository
-
-- Clone the repository in ```$dolibarr_main_document_root_alt/axs4all```
-
-```sh
-cd ....../custom
-git clone git@github.com:gitlogin/axs4all.git axs4all
-```
-
-### <a name="final_steps"></a>Final steps
-
-From your browser:
-
-  - Log into Dolibarr as a super-administrator
-  - Go to "Setup" -> "Modules"
-  - You should now be able to find and enable the module
-
--->
-
-## Licenses
-
-### Main code
-
-GPLv3 or (at your option) any later version. See file COPYING for more information.
-
-### Documentation
-
-All texts and readmes are licensed under GFDL.
+Auth :
+- user : demo
+- passwd : demodemodemo
