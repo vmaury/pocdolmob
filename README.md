@@ -23,7 +23,7 @@ It integrates
 - bootstrap 5.2.1
 - jquery 3.6.1 (I continue to prefer - maybe because I'm too lazy - jquery syntax to classic javascript query syntax)
 - authentification thru dolibarr auth system
-- dynamic lists without hugly JS, using <datalist></datalist> wich is filled by ajax with dolibarr values : see www/assets/datalist_utils.js, which call www/includes/ajaxDataList.php. 
+- dynamic lists without hugly JS, using \<datalist\>\</datalist\> wich is filled by ajax with dolibarr values : see www/assets/datalist_utils.js, which call www/includes/ajaxDataList.php. 
 For the moment, it can retrieve only project, product and user list
 *NB* : the datalist doesn't run ok (not implemented) on Firefox Mobile
 - a fantastic [js plugin to scan QR/barcodes](https://blog.minhazav.dev/research/html5-qrcode.html), thanks a lot to [Minhaz](https://blog.minhazav.dev/), Senior Software Engineer at Google
