@@ -469,7 +469,22 @@ It integrates bootstrap5, a js plugin to scan QR/barcodes, photo and draw app (a
 				));
 			}
 		}
-
+		// Create extrafields
+		include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
+		$extrafields = new ExtraFields($this->db);
+		$raddexf1 = $extrafields->addExtraField('magasin', 'Magasin', 'boolean', '2', '', 'entrepot', 0, 0, '', '', 1, 1, 1, '', '', '', '', '', 1, 1);
+		if ($raddexf1 <= 0) {
+			$err++;
+			$this->error .= $extrafields->error;
+		}
+		// Return code
+		if (!$err) {
+			$this->db->commit();
+			return 1;
+		} else {
+			$this->db->rollback();
+			return 0;
+		}
 		return $this->_init($sql, $options);
 	}
 
