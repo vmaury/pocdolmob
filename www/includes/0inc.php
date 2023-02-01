@@ -7,11 +7,8 @@
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY
  */
-include_once __DIR__."/config.inc.php";
-$res = include_once __DIR__."/../../../../main.inc.php";
-if (!$res) {
-	die("Include of main.inc fails");
-}
+include_once __DIR__."/config.inc.php"; // include of main.inc.php is there
+
 if (multiCompany) {
 	include_once DOL_DOCUMENT_ROOT.'/custom/multicompany/class/actions_multicompany.class.php';
 	$actionMC = new ActionsMulticompany($db);

@@ -11,19 +11,14 @@
  *      \file       /www/logout.php
  *      \brief      Page called to disconnect a user, copied and modified from htdocs/user/logout.php
  */
-
+include_once 'includes/config.inc.php.php';
 //if (! defined('NOTOKENRENEWAL')) define('NOTOKENRENEWAL','1'); // Uncomment creates pb to relogon after a disconnect
 if (!defined('NOREQUIREMENU'))  define('NOREQUIREMENU', '1');
 if (!defined('NOREQUIREHTML'))  define('NOREQUIREHTML', '1');
 if (!defined('NOREQUIREAJAX'))  define('NOREQUIREAJAX', '1');
 //if (! defined('NOREQUIRESOC'))   define('NOREQUIRESOC','1');	// We need company to get correct logo onto home page
 if (!defined('EVEN_IF_ONLY_LOGIN_ALLOWED'))  define('EVEN_IF_ONLY_LOGIN_ALLOWED', '1');
-echo 'kk';
 
-$res = include_once "../../../main.inc.php";
-if (!$res) {
-	die("Include of main.inc fails");
-}
 
 global $conf, $langs, $user;
 

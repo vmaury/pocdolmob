@@ -8,10 +8,8 @@
  * but WITHOUT ANY WARRANTY
  */
 header('Content-Type: text/html; charset=utf-8');
-$res = include_once __DIR__."/../../../../main.inc.php";
-if (!$res) {
-	die("Include of main.inc fails");
-}
+include './config.inc.php';
+
 // If user is connected
 if (empty($_SESSION['dol_login'])) {
 	die('Unconnected');
