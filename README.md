@@ -11,7 +11,7 @@ I'ts mainly intended to be used with a smartphone or tablett (even if it's also 
 It has been tested with Firefow Mobile and Chrome Mobile
 
 ## Installation
-Installation is made like a classic Dolibarr module, copy all the axs2all folder in htdocs/custom and activate the module.
+Installation is made like a classic Dolibarr module, download and dezip, rename the folder **axs4all**, copy it in htdocs/custom and activate the module.
 
 I strongly advise to add another subdomain in your install like mobdol.mydomain.com that points directly to dol_instal_folder/htdocs/custom/axs4all/www
 
